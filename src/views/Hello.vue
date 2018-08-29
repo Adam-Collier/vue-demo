@@ -5,12 +5,14 @@
     <ButtonComponent v-else />
     <p>{{ message }}</p>
     <p>{{ reversedMessage }}</p>
+    <ListComponent />
   </div>
 </template>
 
 <script>
 import MyFirstComponent from "@/components/MyFirstComponent";
 import ButtonComponent from "@/components/ButtonComponent";
+import ListComponent from "@/components/ListComponent";
 
 export default {
   name: "Hello",
@@ -23,7 +25,8 @@ export default {
   },
   components: {
     MyFirstComponent,
-    ButtonComponent
+    ButtonComponent,
+    ListComponent
   },
   computed: {
     reversedMessage: function() {
