@@ -1,9 +1,8 @@
-
 <template>
   <div>
     <h1>Hello World! This is a new route</h1>
-    <MyFirstComponent/>
-    <ButtonComponent/>
+    <MyFirstComponent v-if="showFirst"/>
+    <ButtonComponent v-else />
     <p>{{ message }}</p>
     <p>{{ reversedMessage }}</p>
   </div>
@@ -14,10 +13,12 @@ import MyFirstComponent from "@/components/MyFirstComponent";
 import ButtonComponent from "@/components/ButtonComponent";
 
 export default {
+  name: "Hello",
   data: function() {
     return {
       count: 0,
-      message: "lets learn vue"
+      message: "lets learn vue",
+      showFirst: false
     };
   },
   components: {
